@@ -1,0 +1,7 @@
+jobs:
+  echo:
+    requires: [ ~pr, ~commit ]
+    image: node:18
+    steps:
+      - mk: mkdir $SD_ARTIFACTS_DIR/hoge
+      - cp: cp ./* $SD_ARTIFACTS_DIR/hoge
